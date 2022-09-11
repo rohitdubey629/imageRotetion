@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .box{
+            /* border: 1px solid black; */
+            width: 200px;
+            
+            margin: 0 auto;
+            position: relative;
+            /* overflow: hidden; */
+        }
+        .box .box-pic:after{
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 95%;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: rgb(204, 238, 13);
+        }
+        .box .box-pic{
+            position: relative;
+            transform-origin: 95% 50% 0;
+            transition: all 0.4s;
+            z-index: 1;
+        }
+        .box img{
+          border-radius: 50%;
+          height: 200px;
+          width: 100%;
+       
+        }
+        .box:hover .box-pic{
+            transform: rotate(-140deg);
+        }
+        .box .box-content{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-color: brown;
+            color: white;
+            top: 0;
+            left: 0;
+            border-radius: 50%;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title">CSS Image Hover Effect with Rotating Image Card</h1>
+    <div class="box">
+       <div class="box-pic">
+        <img src="images/flower.jpg" alt="">
+       </div>
+       <div class="box-content">
+        <h3>Web Dedigner</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A odit eveniet assumenda deserunt nam beatae autem molestias rem? Nemo maiores cupiditate eaque aliquam voluptatibus inventore possimus neque delectus deserunt? Ipsum.</p>
+       </div>
+    </div>
+</body>
+</html>
